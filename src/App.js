@@ -1,13 +1,25 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from "../src/assets/logo.svg";
 
 export default function App() {
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [size, setSize] = useState(0);
+
+  useEffect(() => {
+    function updateSize() {
+      setSize(window.innerWidth);
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
 
   const handleMobileMenu = () => {
     setMobileMenu((prevState) => !prevState);
   };
+
+  console.log(size);
 
   return (
     <nav className="mx-auto p-4 bg-amber-400">
@@ -73,7 +85,7 @@ export default function App() {
 
         <div
           role="menubar"
-          style={{ display: `${mobileMenu ? "" : "none"}` }}
+          style={{ display: `${mobileMenu || size > 1023 ? "" : "none"}` }}
           className="flex 
           flex-col 
           gap-4 
