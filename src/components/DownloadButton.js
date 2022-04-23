@@ -24,7 +24,7 @@ function DownloadButton() {
         ring-offset-white
         dark:ring-amber-400
         dark:ring-offset-neutral-800
-        "
+      "
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
