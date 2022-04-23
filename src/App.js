@@ -1,5 +1,6 @@
 import "./App.css";
 import logo from "../src/assets/logo.svg";
+import MenuBar from "./components/MenuBar";
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
             className="w-48 md:w-64 lg:w-72"
           />
         </a>
+
         <button
           id="menu"
           className="
@@ -58,6 +60,39 @@ export default function App() {
             />
           </svg>
         </button>
+
+        <MenuBar />
+
+        {/* <div
+          role="menubar"
+          className="
+        flex
+        flex-col
+        gap-4
+        absolute
+        right-0
+        left-0
+        top-16
+        bg-amber-400
+        shadow-xl
+        text-center
+        p-6
+        text-lg
+        "
+        >
+          <a role="menuitem" href="/">
+            Home
+          </a>
+          <a role="menuitem" href="/">
+            Home
+          </a>
+          <a role="menuitem" href="/">
+            Home
+          </a>
+          <a role="menuitem" href="/">
+            Home
+          </a>
+        </div> */}
       </div>
     </nav>
   );
