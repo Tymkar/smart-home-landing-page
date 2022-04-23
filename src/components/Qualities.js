@@ -9,14 +9,14 @@ function Qualities() {
         alt="dots"
         aria-hidden="true"
         className="
-      hidden
-      lg:block
-      absolute
-      top-1/2
-      -translate-y-1/2
-      -left-24
-      xl:-left-7
-      "
+          hidden
+          lg:block
+          absolute
+          top-1/2
+          -translate-y-1/2
+          -left-24
+          xl:-left-7
+        "
       />
 
       <img
@@ -24,45 +24,45 @@ function Qualities() {
         alt="dots"
         aria-hidden="true"
         className="
-        hidden
-        lg:block
-        absolute
-        top-1/2
-        -translate-y-1/2
-        -right-24
-        xl:-right-7
-      "
+          hidden
+          lg:block
+          absolute
+          top-1/2
+          -translate-y-1/2
+          -right-24
+          xl:-right-7
+        "
       />
       <h2 id="qualities" className="sr-only">
         Our Qualities
       </h2>
       <div
         className="container
-  mx-auto
-  max-w-5xl
-  flex
-  gap-12
-  flex-wrap
-  items-start
-  justify-center
-  md:justify-between
-  "
+          mx-auto
+          max-w-5xl
+          flex
+          gap-12
+          flex-wrap
+          items-start
+          justify-center
+          md:justify-between
+        "
       >
         <div
           className="grid
-    gap-4
-    justify-items-center
-    text-center
-    md:flex-1
-    "
+            gap-4
+            justify-items-center
+            text-center
+            md:flex-1
+          "
         >
           <div
             className="
-       rounded-full
-       border-8
-       border-amber-400
-       p-4
-      "
+              rounded-full
+              border-8
+              border-amber-400
+              p-4
+            "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -85,19 +85,19 @@ function Qualities() {
 
         <div
           className="grid
-    gap-4
-    justify-items-center
-    text-center
-    md:flex-1
-    "
+            gap-4
+            justify-items-center
+            text-center
+            md:flex-1
+          "
         >
           <div
             className="
-       rounded-full
-       border-8
-       border-amber-400
-       p-4
-      "
+              rounded-full
+              border-8
+              border-amber-400
+              p-4
+            "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -120,19 +120,19 @@ function Qualities() {
 
         <div
           className="grid
-    gap-4
-    justify-items-center
-    text-center
-    md:flex-1
-    "
+            gap-4
+            justify-items-center
+            text-center
+            md:flex-1
+          "
         >
           <div
             className="
-       rounded-full
-       border-8
-       border-amber-400
-       p-4
-      "
+              rounded-full
+              border-8
+              border-amber-400
+              p-4
+            "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

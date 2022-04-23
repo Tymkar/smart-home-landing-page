@@ -17,23 +17,23 @@ function SignUp() {
           <a
             href="/"
             className="
-            py-2
-            px-6
-            bg-amber-400
-            dark:text-neutral-900
-            flex
-            gap-2
-            shadow-xl
-            hover:shadow-none
-            transition-shadow
-            focus:outline-none
-            focus-visible:ring-4
-            ring-neutral-900
-            rounded-md
-            ring-offset-4
-            ring-offset-white
-            dark:ring-amber-400
-            dark:ring-offset-neutral-800
+              py-2
+              px-6
+              bg-amber-400
+              dark:text-neutral-900
+              flex
+              gap-2
+              shadow-xl
+              hover:shadow-none
+              transition-shadow
+              focus:outline-none
+              focus-visible:ring-4
+              ring-neutral-900
+              rounded-md
+              ring-offset-4
+              ring-offset-white
+              dark:ring-amber-400
+              dark:ring-offset-neutral-800
             "
           >
             Sign Up
@@ -43,31 +43,31 @@ function SignUp() {
       </div>
       <div
         className="
-        absolute
-        -bottom-6
-        -right-32
-        -z-10
-        aspect-square
-        md:border-8
-        border-amber-400
-        rounded-full
-        md:w-64
-        lg:w-96
-        xl:max-w-lg
+          absolute
+          -bottom-6
+          -right-32
+          -z-10
+          aspect-square
+          md:border-8
+          border-amber-400
+          rounded-full
+          md:w-64
+          lg:w-96
+          xl:max-w-lg
         "
       ></div>
       <div
         className="
-        bg-teal-900
-        h-24
-        xl:h-48
-        -mx-8 
-        mt-12
-        xl:mt-0
-        xl:absolute
-        w-screen
-        -bottom-8
-        -z-10
+          bg-teal-900
+          h-24
+          xl:h-48
+          -mx-8 
+          mt-12
+          xl:mt-0
+          xl:absolute
+          w-screen
+          -bottom-8
+          -z-10
         "
       ></div>
     </section>
