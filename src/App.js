@@ -1,6 +1,9 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import logo from "../src/assets/logo.svg";
+import couch from "../src/assets/couch.png";
+import appImage from "../src/assets/app.svg";
+import Header from "./components/Header";
 
 export default function App() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -19,15 +22,14 @@ export default function App() {
     setMobileMenu((prevState) => !prevState);
   };
 
-  console.log(size);
-
   return (
-    <nav className="mx-auto p-4 bg-amber-400">
-      <div className="container mx-auto flex items-center justify-between">
-        <a
-          href="/"
-          aria-label="Go to homepage"
-          className="
+    <>
+      <nav className="mx-auto p-4 bg-amber-400">
+        <div className="container mx-auto flex items-center justify-between">
+          <a
+            href="/"
+            aria-label="Go to homepage"
+            className="
           focus:outline-none 
           focus-visible:ring-4 
           ring-neutral-900 
@@ -41,18 +43,18 @@ export default function App() {
           hover:opacity-75
           transition-opacity
           "
-        >
-          <img
-            src={logo}
-            alt="Smart Home Logo"
-            width="200"
-            className="w-48 md:w-64 lg:w-72"
-          />
-        </a>
+          >
+            <img
+              src={logo}
+              alt="Smart Home Logo"
+              width="200"
+              className="w-48 md:w-64 lg:w-72"
+            />
+          </a>
 
-        <button
-          id="menu"
-          className="
+          <button
+            id="menu"
+            className="
           lg:hidden 
           focus:outline-none 
           focus-visible:ring-4 
@@ -63,30 +65,30 @@ export default function App() {
           hover:text-neutral-600
           transition-colors
           "
-          aria-expanded="false"
-          aria-label="Open Menu"
-          onClick={handleMobileMenu}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth="2"
+            aria-expanded={mobileMenu ? "true" : "false"}
+            aria-label="Open Menu"
+            onClick={handleMobileMenu}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
 
-        <div
-          role="menubar"
-          style={{ display: `${mobileMenu || size > 1023 ? "" : "none"}` }}
-          className="flex 
+          <div
+            role="menubar"
+            style={{ display: `${mobileMenu || size > 1023 ? "" : "none"}` }}
+            className="flex 
           flex-col 
           gap-4 
           absolute 
@@ -106,11 +108,11 @@ export default function App() {
           lg:shadow-none 
           lg:justify-between 
           lg:w-full"
-        >
-          <a
-            role="menuitem"
-            href="/"
-            className="
+          >
+            <a
+              role="menuitem"
+              href="/"
+              className="
               py-1
               px-6
               dark:text-neutral-900
@@ -123,14 +125,14 @@ export default function App() {
               hover:text-neutral-600
               transition-colors 
               "
-          >
-            Home
-          </a>
+            >
+              Home
+            </a>
 
-          <a
-            role="menuitem"
-            href="/"
-            className="
+            <a
+              role="menuitem"
+              href="/"
+              className="
               py-1
               px-6
               dark:text-neutral-900
@@ -144,14 +146,14 @@ export default function App() {
               transition-colors 
               lg:mr-auto
               "
-          >
-            Contact
-          </a>
+            >
+              Contact
+            </a>
 
-          <a
-            role="menuitem"
-            href="/"
-            className="
+            <a
+              role="menuitem"
+              href="/"
+              className="
               py-1
               px-6
               dark:text-neutral-900
@@ -164,14 +166,14 @@ export default function App() {
               hover:text-neutral-600
               transition-colors 
               "
-          >
-            Login
-          </a>
+            >
+              Login
+            </a>
 
-          <a
-            role="menuitem"
-            href="/"
-            className="
+            <a
+              role="menuitem"
+              href="/"
+              className="
               py-2
               px-6
               bg-teal-900
@@ -186,11 +188,13 @@ export default function App() {
               ring-offset-4 
               ring-offset-amber-400
               "
-          >
-            Sign Up
-          </a>
+            >
+              Sign Up
+            </a>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+      <Header />
+    </>
   );
 }
