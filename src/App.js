@@ -1,9 +1,9 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import logo from "../src/assets/logo.svg";
-import couch from "../src/assets/couch.png";
-import appImage from "../src/assets/app.svg";
 import Header from "./components/Header";
+import DownloadButton from "./components/DownloadButton";
+import Qualities from "./components/Qualities";
 
 export default function App() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -194,7 +194,24 @@ export default function App() {
           </div>
         </div>
       </nav>
+
       <Header />
+
+      <main
+        className="
+      grid
+      gap-12
+      sm:gap-16
+      md:gap-24
+      lg:gap-32
+      px-8
+      overflow-hidden
+      "
+      >
+        <DownloadButton />
+
+        <Qualities />
+      </main>
     </>
   );
 }
