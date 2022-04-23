@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import DownloadButton from "./components/DownloadButton";
 import Qualities from "./components/Qualities";
 import Partners from "./components/Partners";
+import SignUp from "./components/SignUp";
 
 export default function App() {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -212,6 +213,7 @@ export default function App() {
         <DownloadButton />
         <Qualities />
         <Partners />
+        <SignUp />
       </main>
     </>
   );
