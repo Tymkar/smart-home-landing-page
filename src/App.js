@@ -1,8 +1,14 @@
 import "./App.css";
+import { useState } from "react";
 import logo from "../src/assets/logo.svg";
-import MenuBar from "./components/MenuBar";
 
 export default function App() {
+  const [mobileMenu, setMobileMenu] = useState(false);
+
+  const handleMobileMenu = () => {
+    setMobileMenu((prevState) => !prevState);
+  };
+
   return (
     <nav className="mx-auto p-4 bg-amber-400">
       <div className="container mx-auto flex items-center justify-between">
@@ -43,7 +49,11 @@ export default function App() {
           ring-offset-amber-400
           text-neutral-900
           hover:text-neutral-600
-          transition-colors "
+          transition-colors
+          "
+          aria-expanded="false"
+          aria-label="Open Menu"
+          onClick={handleMobileMenu}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -61,38 +71,96 @@ export default function App() {
           </svg>
         </button>
 
-        <MenuBar />
-
-        {/* <div
+        <div
           role="menubar"
-          className="
-        flex
-        flex-col
-        gap-4
-        absolute
-        right-0
-        left-0
-        top-16
-        bg-amber-400
-        shadow-xl
-        text-center
-        p-6
-        text-lg
-        "
+          style={{ display: `${mobileMenu ? "" : "none"}` }}
+          className={
+            "flex flex-col gap-4 absolute z-40 right-0 left-0 top-16 bg-amber-400 shadow-xl text-center text-lg p-6 items-center lg:flex lg:flex-row lg:static lg:shadow-none lg:justify-between lg:w-full"
+          }
         >
-          <a role="menuitem" href="/">
+          <a
+            role="menuitem"
+            href="/"
+            className="
+py-1
+px-6
+dark:text-neutral-900
+focus:outline-none 
+focus-visible:ring-4 
+ring-neutral-900 
+rounded-sm 
+ring-offset-4 
+ring-offset-amber-400
+hover:text-neutral-600
+transition-colors 
+"
+          >
             Home
           </a>
-          <a role="menuitem" href="/">
-            Home
+
+          <a
+            role="menuitem"
+            href="/"
+            className="
+py-1
+px-6
+dark:text-neutral-900
+focus:outline-none 
+focus-visible:ring-4 
+ring-neutral-900 
+rounded-sm 
+ring-offset-4 
+ring-offset-amber-400
+hover:text-neutral-600
+transition-colors 
+lg:mr-auto
+"
+          >
+            Contact
           </a>
-          <a role="menuitem" href="/">
-            Home
+
+          <a
+            role="menuitem"
+            href="/"
+            className="
+py-1
+px-6
+dark:text-neutral-900
+focus:outline-none 
+focus-visible:ring-4 
+ring-neutral-900 
+rounded-sm 
+ring-offset-4 
+ring-offset-amber-400
+hover:text-neutral-600
+transition-colors 
+"
+          >
+            Login
           </a>
-          <a role="menuitem" href="/">
-            Home
+
+          <a
+            role="menuitem"
+            href="/"
+            className="
+py-2
+px-6
+bg-teal-900
+text-white
+shadow-lg
+hover:shadow-none
+transition-shadow
+focus:outline-none 
+focus-visible:ring-4 
+ring-neutral-900 
+rounded-md 
+ring-offset-4 
+ring-offset-amber-400
+"
+          >
+            Sign Up
           </a>
-        </div> */}
+        </div>
       </div>
     </nav>
   );
