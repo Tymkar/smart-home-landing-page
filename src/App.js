@@ -215,8 +215,8 @@ export default function App() {
         <Qualities />
         <Partners />
         <SignUp />
-        <Contact />
       </main>
+      <Contact />
     </>
   );
 }

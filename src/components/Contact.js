@@ -61,6 +61,7 @@ function Contact() {
           />
           <div
             className="
+            
             absolute
             -bottom-18
             left-1/2
@@ -72,6 +73,7 @@ function Contact() {
             rounded-full
             md:w-72
             lg:w-96
+          
           "
           ></div>
         </div>

@@ -34,7 +34,7 @@ function SignUp() {
             ring-offset-white
             dark:ring-amber-400
             dark:ring-offset-neutral-800
-        "
+            "
           >
             Sign Up
           </a>
@@ -54,7 +54,7 @@ function SignUp() {
         md:w-64
         lg:w-96
         xl:max-w-lg
-    "
+        "
       ></div>
       <div
         className="
@@ -68,7 +68,7 @@ function SignUp() {
         w-screen
         -bottom-8
         -z-10
-    "
+        "
       ></div>
     </section>
   );
